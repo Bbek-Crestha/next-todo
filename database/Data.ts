@@ -10,15 +10,15 @@ export const users: userType[] = [
 
 export const tasks: taskType[] = [
 	{
-		task: "100 side jumps",
-		state: "completed",
+		description: "100 side jumps",
+		status: true,
 	},
 	{
-		task: "20 pushups",
-		state: "completed",
+		description: "20 pushups",
+		status: false,
 	},
 	{
-		task: "10km walk",
-		state: "todo",
+		description: "10km walk",
+		status: false,
 	},
 ];

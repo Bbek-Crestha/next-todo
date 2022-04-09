@@ -5,6 +5,6 @@ export type userType = {
 };
 
 export type taskType = {
-	task: string;
-	state: "todo" | "completed";
+	description: string;
+	status: boolean;
 };
