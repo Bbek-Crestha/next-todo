@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { FormEvent, useState } from "react";
+import { setCookie } from "nookies";
 
 import InputField from "../components/utilities/InputField";
 import { users } from "../database/Data";
@@ -19,6 +20,11 @@ const Login: NextPage = () => {
 
 		if (currentUser) {
 			if (password === currentUser.password) {
+				setCookie(null, "token", JSON.stringify(currentUser), {
+					maxAge: 30 * 24 * 60 * 60,
+					path: "/",
+				});
+
 				router.push("/");
 			}
 		}
