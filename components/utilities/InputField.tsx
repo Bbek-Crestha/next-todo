@@ -3,10 +3,11 @@ type Props = {
 	type: string;
 	value: string;
 	setValue: Function;
+	margin: number;
 };
 
 const InputField = (props: Props) => {
-	const { type, placeholder, value, setValue } = props;
+	const { type, placeholder, value, setValue, margin } = props;
 
 	return (
 		<div>
@@ -15,7 +16,7 @@ const InputField = (props: Props) => {
 				placeholder={placeholder}
 				value={value}
 				onChange={(e) => setValue(e.target.value)}
-				className="border-gray-500 border-2 h-10 p-2 mb-4 rounded-lg"
+				className={`border-gray-500 border-2 h-10 p-2 mb-${margin} rounded-lg`}
 			/>
 		</div>
 	);

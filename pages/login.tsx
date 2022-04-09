@@ -43,12 +43,14 @@ const Login: NextPage = () => {
 					placeholder="Email"
 					value={email}
 					setValue={setEmail}
+					margin={4}
 				/>
 				<InputField
 					type="password"
 					placeholder="Password"
 					value={password}
 					setValue={setPassword}
+					margin={4}
 				/>
 
 				<button type="submit" className="bg-blue-500 py-2 px-4 rounded-lg">
