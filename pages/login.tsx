@@ -13,7 +13,7 @@ const Login: NextPage = () => {
 
 	const router = useRouter();
 
-	const handleSubmit = (e: FormEvent) => {
+	const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
 		const currentUser = users.find((user) => user.email === email);
@@ -44,6 +44,7 @@ const Login: NextPage = () => {
 					value={email}
 					setValue={setEmail}
 					margin={4}
+					autoFocus={false}
 				/>
 				<InputField
 					type="password"
@@ -51,6 +52,7 @@ const Login: NextPage = () => {
 					value={password}
 					setValue={setPassword}
 					margin={4}
+					autoFocus={false}
 				/>
 
 				<button type="submit" className="bg-blue-500 py-2 px-4 rounded-lg">

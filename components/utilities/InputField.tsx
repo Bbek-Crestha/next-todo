@@ -4,10 +4,11 @@ type Props = {
 	value: string;
 	setValue: Function;
 	margin: number;
+	autoFocus: boolean;
 };
 
 const InputField = (props: Props) => {
-	const { type, placeholder, value, setValue, margin } = props;
+	const { type, placeholder, value, setValue, margin, autoFocus } = props;
 
 	return (
 		<div>
@@ -15,6 +16,7 @@ const InputField = (props: Props) => {
 				type={type}
 				placeholder={placeholder}
 				value={value}
+				autoFocus={autoFocus}
 				onChange={(e) => setValue(e.target.value)}
 				className={`border-gray-500 border-2 h-10 p-2 mb-${margin} rounded-lg`}
 			/>
