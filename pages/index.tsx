@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 					<p className="text-center text-2xl font-bold mb-4">Tasks</p>
 					{tasks.map((task, index) => (
 						<div key={index}>
-							<TaskComponent task={task} />
+							<TaskComponent task={task} tasks={tasks} setTasks={setTasks} />
 						</div>
 					))}
 				</div>
