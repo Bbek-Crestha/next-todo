@@ -1,16 +1,27 @@
 import { NextPage } from "next";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { FormEvent, useState } from "react";
 
 import InputField from "../components/utilities/InputField";
+import { users } from "../database/Data";
 
 const Login: NextPage = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
+	const router = useRouter();
+
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
-		console.log(`Form Submitted: ${email} ${password}`);
+
+		const currentUser = users.find((user) => user.email === email);
+
+		if (currentUser) {
+			if (password === currentUser.password) {
+				router.push("/");
+			}
+		}
 	};
 
 	return (
