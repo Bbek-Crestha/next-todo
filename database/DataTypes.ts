@@ -3,3 +3,8 @@ export type userType = {
 	email: string;
 	password: string;
 };
+
+export type taskType = {
+	task: string;
+	state: "todo" | "completed";
+};
