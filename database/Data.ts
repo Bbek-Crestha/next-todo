@@ -1,4 +1,4 @@
-import { userType, taskType } from "./DataTypes";
+import { userType, taskType } from "@database/DataTypes";
 
 export const users: userType[] = [
 	{

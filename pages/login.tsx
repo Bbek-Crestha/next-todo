@@ -4,8 +4,8 @@ import { useRouter } from "next/router";
 import { FormEvent, useState } from "react";
 import { setCookie } from "nookies";
 
-import InputField from "../components/utilities/InputField";
-import { users } from "../database/Data";
+import InputField from "@components/utilities/InputField";
+import { users } from "@database/Data";
 
 const Login: NextPage = () => {
 	const [email, setEmail] = useState("");
