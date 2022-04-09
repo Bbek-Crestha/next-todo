@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main className="flex h-[calc(100vh-50px)] mt-[50px] justify-center p-4 items-center">
+			<main className="flex h-[calc(100vh-50px)] mt-[50px] justify-center p-4 items-start">
 				<NavBar />
 
 				<div className="border-2 p-4 rounded-lg max-h-[calc(100vh-100px)] overflow-y-auto border-black shadow-black shadow-lg w-96 lg:w-1/3">
