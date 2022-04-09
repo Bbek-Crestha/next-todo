@@ -31,6 +31,11 @@ const AddTask = (props: Props) => {
 		setOpenField(false);
 	};
 
+	const handleClose = () => {
+		setTask("");
+		setOpenField(false);
+	};
+
 	return (
 		<div className="text-center">
 			{openField ? (
@@ -52,7 +57,8 @@ const AddTask = (props: Props) => {
 					</button>
 
 					<button
-						onClick={() => setOpenField(false)}
+						type="reset"
+						onClick={handleClose}
 						className="text-xl font-bold bg-red-500 px-3 rounded-full"
 					>
 						x
